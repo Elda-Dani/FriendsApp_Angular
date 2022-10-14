@@ -16,6 +16,8 @@ export class AddfriendsComponent implements OnInit {
  friendNickName=""
 DescribeYourFriend=""
 
+status:boolean=false
+
 readValue=()=>{
   let data={
     "name":this.name,
@@ -30,6 +32,12 @@ readValue=()=>{
     (response)=>{
       console.log(response)
       alert("Successfully Added")
+      
+  this.name=""
+  this.friendName=""
+ this.friendNickName=""
+this.DescribeYourFriend=""
+this.status=true
     }
   )
 }
